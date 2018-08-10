@@ -12,9 +12,9 @@ namespace ConsoleApp1
 			Console.WriteLine("Please enter a name: ");
 			stuff1.Name = Console.ReadLine();
 			Console.WriteLine("Please enter the value of it: ");
-			stuff1.Value = int.Parse(Console.ReadLine());
+			stuff1.Value = double.Parse(Console.ReadLine());
 			Console.WriteLine("Enter your contribution for each month: ");
-			stuff1.MonthlyAdded = int.Parse(Console.ReadLine());
+			stuff1.MonthlyAdded = double.Parse(Console.ReadLine());
 
 			Console.WriteLine("Would you like to see a monthly of yearly breakdown?");
 			Console.WriteLine("1. Monthly");
@@ -73,14 +73,14 @@ namespace ConsoleApp1
 
 		static double Interest(double interest)
 		{
-			var res = (interest * 1.0253) - interest;
+			var res = (interest * 1.0075) - interest;
 			res = (res / 12) + interest;
 			return res;
 		}
 
 		static double YearlyInterest(double interest)
 		{
-			var res = (interest * 1.0253) /* - interest*/;
+			var res = (interest * 1.0075) /* - interest*/;
 			//res = res + interest;
 			return res;
 		}
